@@ -1,5 +1,5 @@
 class DicomSeriesSerializer < ActiveModel::Serializer
-  belongs_to :dicom_study
   attributes :id, :series_uid, :modality, :dicom_images
+  has_many :dicom_images, include_nested_associations: true
 
 end

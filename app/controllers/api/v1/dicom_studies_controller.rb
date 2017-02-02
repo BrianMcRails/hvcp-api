@@ -5,7 +5,6 @@ module Api::V1
     # GET /dicom_studies
     def index
       @dicom_studies = DicomStudy.all
-
       render json: @dicom_studies
     end
 
